@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+:root {
+  --bg-body-color: #040404;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  background-color: var(--bg-body-color);
+}
+.mouse-c {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  filter: blur(80px);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 0;
+}
+#rickroll {
+  all: unset;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #d82128;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.rickroll-vid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+}
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 999;
+}
+@media (max-width: 768px) {
+  .mouse-c {
+    width: 180px;
+    height: 180px;
+  }
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+.windows-security {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.windows-security .container .texts h1 {
+  font-weight: 400;
+  font-size: 26px;
+  color: #efefef;
+  margin-bottom: 25px;
+}
+.windows-security .container .texts p {
+  color: #7e7e7e;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.windows-security .container .options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .windows-security .container .options {
+    grid-template-columns: 100%;
+  }
+}
+.windows-security .container .options .box {
+  background-color: #000;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.windows-security .container .options .box:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+.windows-security .container .options .box i {
+  color: #0072cb;
+  font-size: 50px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.windows-security .container .options .box i[data-t-f="true"]::after {
+  content: "\f00c";
+  width: 25px;
+  height: 25px;
+  background-color: #008a17;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  border-radius: 50%;
+  color: #fbfdfc;
+  font-size: 18px;
+  font-family: "FontAwesome";
+  text-align: center;
+  line-height: 25px;
+}
+.windows-security .container .options .box i[data-t-f="false"]::after {
+  content: "\f00d";
+  width: 25px;
+  height: 25px;
+  background-color: #d82128;
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  border-radius: 50%;
+  color: #fbfdfc;
+  font-size: 18px;
+  font-family: "FontAwesome";
+  text-align: center;
+  line-height: 25px;
+}
+.windows-security .container .options .box h2 {
+  font-weight: 400;
+  color: #efefef;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.windows-security .container .options .box p {
+  font-weight: 400;
+  color: #7e7e7e;
+}
